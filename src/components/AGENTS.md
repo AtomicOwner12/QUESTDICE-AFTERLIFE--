@@ -1,0 +1,1 @@
+- The sword swing is a CSS-animated blade plus hand (`.sword-hand`, coloured by `--arm-*` vars) inside `.world-player` (`.hero-sword`, per-direction `--a0/--arc`), so it follows the hero's per-frame glide without React re-renders; the sprite keeps walking and only switches to `gear="swing"` (sheathed sword hidden).

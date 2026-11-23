@@ -1,0 +1,110 @@
+{
+  "source": "code archive QUESTDICE-AFTERLIFE--main.zip (TanStack Start game on its own Lovable Cloud backend, Google + Microsoft sign-in)",
+  "capabilities": [
+    {
+      "capability": "code",
+      "source": "src/** (routes, components, lib, assets, tests)",
+      "outcome": "migrate",
+      "status": "done",
+      "next_action": "Copied; 1,239 tests pass; typecheck clean"
+    },
+    {
+      "capability": "assets",
+      "source": "18 asset pointers from old project + 6 bundled story images",
+      "outcome": "migrate",
+      "status": "verified",
+      "next_action": "18 pointer images re-hosted in this project; 6 bundled images copied"
+    },
+    {
+      "capability": "schema",
+      "source": "src/integrations/supabase/types.ts + call sites (no SQL migrations in archive)",
+      "outcome": "migrate",
+      "status": "verified",
+      "next_action": "Recreated from types + call sites: 11 tables, map_cards view, 11 functions, profile/wallet trigger"
+    },
+    {
+      "capability": "records",
+      "source": "old Cloud database (no export in archive)",
+      "outcome": "migrate",
+      "status": "pending",
+      "next_action": "Ask for per-table CSV/JSON exports after preview"
+    },
+    {
+      "capability": "auth identities",
+      "source": "Google + Microsoft sign-in (no user export)",
+      "outcome": "migrate",
+      "status": "pending",
+      "next_action": "Google + Microsoft enabled and sign-in session checked; waiting for users export (id, email) to link old players"
+    },
+    {
+      "capability": "authorization",
+      "source": "RLS + SECURITY DEFINER functions, lobby writes via service role",
+      "outcome": "migrate",
+      "status": "verified",
+      "next_action": "Two-player check: private maps/profiles/wallets hidden, coins and play counts not editable, lobbies server-only"
+    },
+    {
+      "capability": "uploaded file bytes",
+      "source": "none detected (no storage usage)",
+      "outcome": "not applicable",
+      "status": "verified",
+      "next_action": "none"
+    },
+    {
+      "capability": "AI (Dicey map builder)",
+      "source": "Lovable AI Gateway via LOVABLE_API_KEY",
+      "outcome": "preserve",
+      "status": "verified",
+      "next_action": "Live Dicey request built and saved a 200-field map"
+    },
+    {
+      "capability": "realtime broadcast",
+      "source": "online lobby bump channel",
+      "outcome": "preserve",
+      "status": "verified",
+      "next_action": "Second browser joined lobby; both saw 2/40 players"
+    },
+    {
+      "capability": "public endpoints / webhooks / callbacks",
+      "source": "none detected",
+      "outcome": "not applicable",
+      "status": "verified",
+      "next_action": "none"
+    },
+    {
+      "capability": "schedules",
+      "source": "none detected",
+      "outcome": "not applicable",
+      "status": "verified",
+      "next_action": "none"
+    },
+    {
+      "capability": "payments",
+      "source": "none (real-money coin packs shown as 'bald', PAYMENTS_ENABLED=false)",
+      "outcome": "not applicable",
+      "status": "verified",
+      "next_action": "none"
+    },
+    {
+      "capability": "secrets",
+      "source": "LOVABLE_API_KEY, Cloud keys (platform-managed)",
+      "outcome": "platform-managed",
+      "status": "verified",
+      "next_action": "LOVABLE_API_KEY and Cloud keys provided by the platform"
+    },
+    {
+      "capability": "cutover",
+      "source": "old project URL",
+      "outcome": "pending",
+      "status": "pending",
+      "next_action": "Publish new app and share new link"
+    },
+    {
+      "capability": "verification",
+      "source": "-",
+      "outcome": "pending",
+      "status": "pending",
+      "next_action": "Signed-in flows checked (username, wallet 360, Dicey map save, sell + buy 180, votes/comments, online lobby); old-player linking waits on exports"
+    }
+  ]
+}
